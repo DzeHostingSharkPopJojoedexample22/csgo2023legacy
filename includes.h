@@ -1,28 +1,31 @@
 #pragma once
-#include "version.h"
-#include <algorithm>
+
+#ifndef INCLUDES_H
+#define INCLUDES_H
+
 #include <iostream>
-#include <cmath>
 #include <string>
-#include <unordered_map>
-#include <array>
-#include <vector>
-#include <deque>
-#include <thread>
-#include <any>
-#include <tuple>
-#include <Windows.h>
-#include <winnt.h>
-#include <intrin.h>
-#include <ShlObj.h>
-#include <Psapi.h>
+#include <random>
+#include <algorithm>
+
+#include <windows.h>
+#include <tlhelp32.h>
+
+/* d3d9 */
 #include <d3d9.h>
 #include <d3dx9.h>
-#include "protect\crypt_bytes.h"
-#include "protect\crypt_call.h"
-#include "protect\crypt_hash.h"
-#include "protect\crypt_ptr.h"
-#include "protect\crypt_str.h"
-#include "sdk\math.h"
 
-using namespace std;
+#pragma comment(lib, "d3d9.lib")
+#pragma comment(lib, "d3dx9.lib")
+
+/* third-party */
+#include "../third-party/imgui/imgui.h"
+#include "../third-party/imgui/imgui_internal.h"
+
+#include "../third-party/imgui/impl/imgui_impl_dx9.h"
+#include "../third-party/imgui/impl/imgui_impl_win32.h"
+
+#include "utils/utils.h"
+#include "graphics/d3d9.h"
+
+#endif // !INCLUDES_H
