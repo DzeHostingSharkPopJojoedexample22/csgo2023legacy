@@ -1,22 +1,29 @@
 #pragma once
 
-#include "..\includes.h"
-#include "..\data.h"
-#include "..\globals.h"
-#include "..\render.h"
-
-class Visuals
+namespace core::tabs::visuals
 {
-	virtual void crosshair();
-	virtual void damage_marker();
-	virtual void automatic_peek();
-	virtual void manual_anti_aim();
-	virtual void scope_lines();
-	virtual void field_of_view_circle();
+	/* enemies tab */
+	void enemies_first_tab();
+	void enemies_second_tab();
+	void enemies_third_tab();
 	
-public:
-	virtual void run();
-	void agent_changer();
+	/* local tab */
+	void local_first_tab();
+	void local_second_tab();
+	void local_third_tab();
 
-	std::unordered_map <std::string, int> player_model_indexes;
-};
+	/* teammates tab */
+	void teammates_first_tab();
+	void teammates_second_tab();
+	void teammates_third_tab();
+
+	/* world tab */
+	void world_first_tab();
+	void world_second_tab();
+
+	void world_third_tab();
+	void world_forth_tab();
+
+	void world_fifth_tab();
+	void world_sixth_tab();
+}

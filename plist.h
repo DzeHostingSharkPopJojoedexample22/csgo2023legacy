@@ -1,9 +1,7 @@
 #pragma once
 
-namespace core::tabs::misc
+namespace core::tabs::plist
 {
 	void first_tab();
 	void second_tab();
-
-	void third_tab();
 }
