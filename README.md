@@ -1,1 +1,1 @@
-# csgo2023legacy
+# Rise
